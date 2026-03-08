@@ -1,0 +1,91 @@
+/* ===========================
+   EmployeeManagement CSS
+   =========================== */
+
+.emp-mgmt {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.emp-mgmt__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 900px) { .emp-mgmt__stats { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .emp-mgmt__stats { grid-template-columns: 1fr; } }
+
+/* Avatar */
+.emp-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f97316, #ea6c0a);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emp-row__name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emp-row__fullname {
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.emp-row__date,
+.emp-row__phone {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.emp-row__contact {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+/* Attendance bar */
+.emp-attendance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.emp-attendance__bar {
+  width: 80px;
+  height: 6px;
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.emp-attendance__fill {
+  height: 100%;
+  background: var(--color-success);
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+
+.emp-attendance__pct {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+/* Badge orange (Manager) */
+.badge--orange {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
